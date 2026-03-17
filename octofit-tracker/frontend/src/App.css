@@ -1,0 +1,138 @@
+:root {
+  --octo-ink: #13293d;
+  --octo-accent: #0d6efd;
+  --octo-accent-dark: #0a58ca;
+  --octo-highlight: #20a06b;
+  --octo-surface: #f5f9ff;
+  --octo-card: #ffffff;
+  --octo-border: #dce7f6;
+  --octo-table-head: #eaf3ff;
+  --octo-table-stripe: #f8fbff;
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(13, 110, 253, 0.12), transparent 42%),
+    radial-gradient(circle at 88% 100%, rgba(25, 135, 84, 0.1), transparent 40%),
+    var(--octo-surface);
+  color: var(--octo-ink);
+}
+
+main.container {
+  position: relative;
+}
+
+.octo-hero-card {
+  background: linear-gradient(125deg, #ffffff 0%, #eff6ff 60%, #f5f9ff 100%);
+  border: 1px solid var(--octo-border);
+}
+
+.octo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.octo-brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  border: 1px solid #c8dcfa;
+  background: #ffffff;
+  box-shadow: 0 0.35rem 0.9rem rgba(19, 41, 61, 0.12);
+}
+
+.octo-brand-title {
+  color: #133860;
+}
+
+.octo-brand-subtitle {
+  color: #426887;
+}
+
+.octo-data-card {
+  background: var(--octo-card);
+  border: 1px solid var(--octo-border);
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.octo-data-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.4rem rgba(19, 41, 61, 0.12);
+}
+
+.octo-data-table thead th {
+  background: var(--octo-table-head);
+  color: #244765;
+  border-bottom-width: 1px;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.octo-data-table tbody tr:nth-child(even) {
+  background-color: var(--octo-table-stripe);
+}
+
+.octo-data-table tbody td {
+  color: #19334d;
+  white-space: nowrap;
+}
+
+.nav-pills .nav-link {
+  color: #245072;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--octo-accent);
+  color: #ffffff;
+}
+
+.btn-primary {
+  background-color: var(--octo-accent);
+  border-color: var(--octo-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--octo-accent-dark);
+  border-color: var(--octo-accent-dark);
+}
+
+.btn-outline-secondary {
+  color: #27597e;
+  border-color: #9cc0e8;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: #e9f3ff;
+  color: #1d4766;
+  border-color: #7ca9dc;
+}
+
+a.link-primary,
+.card a.link-primary {
+  color: var(--octo-accent-dark) !important;
+}
+
+h1,
+h2,
+h3 {
+  color: #173f63;
+}
+
+.modal-backdrop.show {
+  backdrop-filter: blur(2px);
+  background-color: rgba(19, 41, 61, 0.45);
+}
+
+@media (max-width: 767px) {
+  .octo-data-table tbody td {
+    white-space: normal;
+  }
+}
